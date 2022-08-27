@@ -29,10 +29,10 @@ class Solution(object):
             if s[right] not in hashset:
                 right -= 1
 
-            # why do I need this line below?:
+            # why do I need this line below?...you don't it can just be an else statement.
             if s[left] in hashset and s[right] in hashset:
                 
-                # swap
+                # swapping vowels
                 s[left], s[right] = s[right], s[left]
                 left += 1
                 right -=1
