@@ -77,3 +77,41 @@ class Solution(object):
                 j += 1
 
 '''
+
+class Solution(object):
+    def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: None Do not return anything, modify nums in-place instead.
+                
+        if len(nums) < 1:
+            return nums
+     
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                continue
+            else:
+                nums.remove(nums[i])
+                nums.append(0)
+        return nums
+        
+        """
+        # We use two pointers to modify in-place. Both front and i pointers start at 0. Using i as runner, iterate through the array, if nums[i] is NOT 0, we move nums[i] to the front by reassingment. Then we must advance front by 1. 
+        # Now use another for loop to iterate from where front currently is until the end of nums...and assign each nums[i] a 0 until the end. The array is now modified in place.
+        
+        # edge case:
+        if len(nums)<=1:
+            return nums
+        
+        
+        front = 0
+        
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[front] = nums[i]
+                front+=1
+        print(nums)
+                
+        for i in range(front, len(nums)):
+            nums[i] = 0
+
