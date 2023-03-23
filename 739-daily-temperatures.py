@@ -1,6 +1,9 @@
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-
+        
+        # Simple elengant Monotone stack
+        
+      
         # O(n) time and space
         result = [0] * len(temperatures)
 
