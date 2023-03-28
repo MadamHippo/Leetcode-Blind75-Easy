@@ -13,28 +13,39 @@ class Solution(object):
         ROWS = len(matrix)
         COLS = len(matrix[0])
 
-        top = 0
-        bottom = ROWS - 1
+        top_row = 0
+        bottom_row = ROWS - 1
 
-        while top <= bottom:
-            which_row = (top + bottom) // 2
+        while top_row <= bottom_row:
+            which_row = (top_row + bottom_row) // 2
+
+
             if target < matrix[which_row][0]:
-                bottom = which_row - 1
+                bottom_row = which_row - 1
+
+            # looking at the right-most value to see if this target is greater than the largest value in the row:
             elif target > matrix[which_row][-1]:
-                top = which_row + 1
+                # if it is, move onto the next (larger) row
+                top_row = which_row + 1
+
+            # target value is in the current row...so break out of the loop so you can do the SECOND binary search
             else:
                 break
 
-        if not (top <= bottom):
+        # none of the rows contain the target value..
+        if not (top_row <= bottom_row):
             return False
-        which_row = (top + bottom) // 2
+
+        # SECOND binary search portion:
+        # run binary search on a specific row...
+        current_row = (top_row + bottom_row) // 2
         left = 0
         right = COLS-1
         while left <= right:
             mid_index = (left + right) // 2
-            if target > matrix[which_row][mid_index]:
+            if target > matrix[current_row][mid_index]:
                 left = mid_index + 1
-            elif target < matrix[which_row][mid_index]:
+            elif target < matrix[current_row][mid_index]:
                 right = mid_index - 1
             else:
                 return True
