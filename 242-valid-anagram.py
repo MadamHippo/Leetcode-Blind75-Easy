@@ -1,6 +1,8 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         '''
+        https://leetcode.com/problems/valid-anagram/
+        
         Anagram means all letters of a word makes up another word
         
         
