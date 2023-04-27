@@ -9,7 +9,7 @@ class Solution(object):
         
         # Log(N)
         
-        # REturn smallest CHARACTER (not index)
+        # Return smallest CHARACTER (not index)
         
         
         
