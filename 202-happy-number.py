@@ -1,30 +1,33 @@
-# Literally still do not understand this... https://leetcode.com/problems/happy-number/
+class Solution(object):
+    def isHappy(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
 
+        # choose a hashset because looking up the number takes O(1) time.
+        # Array and List takes O(n) time.
 
-class Solution:
-    def isHappy(self, n: int) -> bool:
+        # HELPER FUNCTION:
+        def get_next_digit(n):
+            digit_sum = 0
 
-        # keep track of number we visited in hashmap in constant speed
-        visited = set()
+            # if n isn't 0...separate each digit and add it up, and that will become your new number
+            while n != 0:
+                next_digit = n % 10
+                n = n / 10
+                digit_sum += next_digit * next_digit
+            return digit_sum
 
-        while n not in visited:
-            visited.add(n)
-            n = self.sumOfSquares(n)
+        # create a set storing uniquely seen numbers...
+        hashset = set()
 
-            if n == 1:
-                return True
-        return False
+        # as long as n isn't 1 and is NOT in the set...add it to the set and move onto the next number using Helper Function
+        while n != 1 and n not in hashset:
+            hashset.add(n)
+            n = get_next_digit(n)
 
-    # helper function
-    
-    def sumOfSquares(self, n: int) -> int:
-        output = 0
+        # otherwise return True since n is a happy number
+        else: 
+            return n == 1
 
-        while n:
-            # mod for the last place number
-            digit = n % 10
-            # squaring in py
-            digit = digit ** 2
-            output += digit
-            n = n // 10
-        return output
