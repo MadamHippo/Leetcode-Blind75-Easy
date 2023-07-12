@@ -3,7 +3,7 @@ class Solution:
 
 # HASHMAP SOLUTION
 # runtime O(n) because the m is smaller (we know it is) than n so just go with n as the worst runtime
-
+# https://leetcode.com/problems/majority-element/
         hashmap = {}
                 
         for n in nums:
