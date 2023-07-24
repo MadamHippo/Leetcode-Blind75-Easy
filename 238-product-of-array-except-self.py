@@ -1,4 +1,8 @@
 '''
+
+https://leetcode.com/problems/product-of-array-except-self/
+
+
 The problem asks you to find the product of all elements in an array except the current element at each index. Here's a step-by-step solution that is simple and straightforward:
 
 Create an output array of the same length as the input array, with all elements initialized to 1. This array will store the final result.
