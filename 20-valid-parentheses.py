@@ -1,3 +1,30 @@
+"""
+You are given a String called S.
+
+OK so the secret sauce is using a Dictionary and a Stack.
+
+Add the opening and closing parens as keys: values to the Dictionary.
+
+Create an empty stack to keep order.
+
+Go thru each character in the String S.
+    Does this character match a Key in the dictionary?
+        Yes -> then append it to the stack.
+        
+        No -> then this character doesn't match a key in the dictionary...so it must be a closing paren
+            so pop the top of the stack (IF a stack exists that is)
+            does what popped off the stack (an open paren) correlate to the correct closing paren character?
+                -> If yes, continue
+                -> If No, return false
+                
+ Now just check at the end of it all, is your stack empty? IF it's empty it, return True it was all valid parens.
+            
+    
+
+"""
+
+
+
 class Solution(object):
     def isValid(self, string):
         """
@@ -39,29 +66,3 @@ class Solution(object):
         return stack == [0]
 
 
-
-"""
-You are given a String called S.
-
-OK so the secret sauce is using a Dictionary and a Stack.
-
-Add the opening and closing parens as keys: values to the Dictionary.
-
-Create an empty stack to keep order.
-
-Go thru each character in the String S.
-    Does this character match a Key in the dictionary?
-        Yes -> then append it to the stack.
-        
-        No -> then this character doesn't match a key in the dictionary...so it must be a closing paren
-            so pop the top of the stack (IF a stack exists that is)
-            does what popped off the stack (an open paren) correlate to the correct closing paren character?
-                -> If yes, continue
-                -> If No, return false
-                
- Now just check at the end of it all, is your stack empty? IF it's empty it, return True it was all valid parens.
-            
-        
-
-
-"""
