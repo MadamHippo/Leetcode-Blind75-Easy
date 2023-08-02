@@ -1,4 +1,6 @@
 """
+https://leetcode.com/problems/valid-parentheses/
+
 You are given a String called S.
 
 OK so the secret sauce is using a Dictionary and a Stack.
@@ -19,7 +21,6 @@ Go thru each character in the String S.
                 
  Now just check at the end of it all, is your stack empty? IF it's empty it, return True it was all valid parens.
             
-    
 
 """
 
