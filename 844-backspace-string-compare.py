@@ -25,26 +25,31 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        # using stacks 
-        #O(n) time and O(n) space
-        
+        # Using stacks to handle backspaces efficiently
+        # This algorithm has a time complexity of O(n) and a space complexity of O(n).
+
+        # Initialize two empty stacks, one for each input string
         stack = []
-        for i in s:
-
-            if(i!="#"):
-                stack.append(i)
-            elif(i=="#")and (len(stack)!=0):
-                stack.pop()
-
         stack1 = []
 
+        # Iterate through the characters in the first input string 's'
+        for i in s:
+            if i != "#":
+                # If the character is not a backspace ('#'), push it onto the stack
+                stack.append(i)
+            elif i == "#" and len(stack) != 0:
+                # If the character is a backspace and the stack is not empty,
+                # pop the top element from the stack, effectively simulating the backspace behavior
+                stack.pop()
+
+        # Repeat the same process for the second input string 't'
         for i in t:
-            if(i!="#"):
+            if i != "#":
                 stack1.append(i)
-            elif(i=="#")and (len(stack1)!=0):
+            elif i == "#" and len(stack1) != 0:
                 stack1.pop()
 
-
-        if(stack==stack1):
+        # Finally, compare the two stacks. If they are equal, the strings are considered equal
+        if stack == stack1:
             return True
         return False
