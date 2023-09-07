@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/binary-search/
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         # write in O(log n) time, everytime you can eliminate by half until you find target. Log(base2 of N)...how many times n can be divided by 2.
