@@ -1,9 +1,10 @@
+        # https://leetcode.com/problems/climbing-stairs/description/
+
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         
-        # Top down w/o memorization is O(2^n) which is not good bc we're repeating too much resolving subproblems. Top down is going from n down to 0.
-        # https://leetcode.com/problems/climbing-stairs/description/
-        
+        # Top down w/o memorization is O(2^n) which is not good bc we're repeating too much resolving subproblems. Top down is going from n down to 0.        
     
         
         # Bottom Up solution (starting at 0 and going to n) w/ memo-ization
