@@ -8,6 +8,8 @@ class Solution(object):
 
         # run time is logm + logn because we're using logm to find which row to look for and then logn to see which exact value in the row is the target.
 
+        # https://leetcode.com/problems/search-a-2d-matrix/
+
         # it's a double binary search basically
 
         ROWS = len(matrix)
