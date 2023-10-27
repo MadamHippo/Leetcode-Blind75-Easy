@@ -7,7 +7,7 @@ Given the root of a binary tree and an integer targetSum, return true if the tre
 
 A leaf is a node with no children.
 
-'''
+
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -15,6 +15,7 @@ A leaf is a node with no children.
 #         self.val = val
 #         self.left = left
 #         self.right = right
+'''
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         
