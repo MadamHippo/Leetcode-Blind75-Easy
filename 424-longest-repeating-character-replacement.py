@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/longest-repeating-character-replacement/description/
+# Problem: https://leetcode.com/problems/longest-repeating-character-replacement/description/
 
 class Solution(object):
     def characterReplacement(self, s, k):
