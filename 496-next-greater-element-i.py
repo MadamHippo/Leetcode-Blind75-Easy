@@ -35,8 +35,6 @@ class Solution:
                 if we do find next greater value, get the dictionary index of the original value, assign it to a new variable (idx)
                 now put our attention to the return output array of -1s. We're using that new variable (idx) and telling return output array where and what that new greater element should be in the returning output.
                 
-                
-        
             
         '''
         
@@ -56,8 +54,7 @@ class Solution:
                         output_result[new_high_index] = nums2[j]
                         break
         return output_result
-        
-        
+    
         '''
                         
         
@@ -74,10 +71,7 @@ class Solution:
                 
         
         
-        
-        
-        
-        
+    
         
         D. Efficient (Neet's):
         O(n + m)
@@ -96,6 +90,7 @@ class Solution:
             12. then its in the hash so let's add it to the stack so we can process it and check if what's the next greater element of it.
             13. if it doesn't show up, we don't have to append current to stack.
         14. return output_result
+        
         '''
         
         dictionary_nums1_index = {num:index for index, num in enumerate(nums1)}
