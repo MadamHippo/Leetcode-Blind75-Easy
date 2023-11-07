@@ -1,4 +1,4 @@
-# 9	Palindrome Number	https://leetcode.com/problems/palindrome-number/	String
+# Palindrome Number	https://leetcode.com/problems/palindrome-number
 
 ### Python
 class Solution(object):
