@@ -4,9 +4,7 @@ class Solution(object):
         :type letters: List[str]
         :type target: str
         :rtype: str
-        
-        # TRICKY!!!
-        
+                
         # Log(N)
         
         # Return smallest CHARACTER (not index)
